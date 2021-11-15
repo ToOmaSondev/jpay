@@ -32,6 +32,7 @@ gem 'devise'
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'pry-byebug'
