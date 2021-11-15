@@ -12,6 +12,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        <%= image_tag('logo_transparent.png', width:'80', height:'80') %>
+        </a>
+      </div>
+    </nav>
+  <%= yield %>
   </body>
 </html>
