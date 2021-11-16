@@ -19,5 +19,12 @@ image2 = Item.create!(name: "Image3", price: '18', size: '40x30', user: rayane)
 
 Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: rayane, item: image)
 Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, item: image2)
+Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: max, item: image)
+Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: thomas, item: image2)
+
+Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: rayane, item: image, status: 3)
+Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, item: image2, status: 3)
+Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: max, item: image, status: 4)
+Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: thomas, item: image2, status: 4)
 
 puts 'We create a fake guys'
