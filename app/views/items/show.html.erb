@@ -1,6 +1,8 @@
 <h1>Ici c'est la show</h1>
 
 <div class="container-card">
+<%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
 <%= @item.name %>
 <%= @item.price %>
+<%= @item.photo %>
 </div>
