@@ -1,6 +1,18 @@
 .navbar-lewagon {
+  display: flex;
   justify-content: space-between;
-  background: white;
+  background: url('row-of-cameras.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  box-shadow: 3px 3px 3px #02182B;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +20,29 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 150px;
+  border-radius: 10px;
+  margin-left: 5px;
+  box-shadow: 4px 4px 4px #D1DEDE;
+}
+
+.btn-gradient {
+  color: #D1DEDE;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: linear-gradient(#FFCA3A, #02182B);
+  margin-left: 10px;
+  margin-right: 10px;
+  opacity: 0.95;
+  border: none;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#02182B, #FFCA3A);
+  color: #D1DEDE;
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: auto;
+  right: 0;
 }
