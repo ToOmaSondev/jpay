@@ -1,0 +1,15 @@
+<% @my_items.each do |item| %>
+  <p><%= item.name %></p>
+<% end %>
+
+<% @bookings.each do |booking| %>
+  <p><%= booking.item.name %></p>
+<% end %>
+
+<% @active_incoming_bookings.each do |booking| %>
+  <p><%= booking.item.name %></p>
+<% end %>
+
+<% @inactive_incoming_bookings.each do |booking| %>
+  <p><%= booking.item.name %></p>
+<% end %>
