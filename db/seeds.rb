@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
+
 User.destroy_all
 puts 'Seed Destroy'
 
@@ -17,8 +19,12 @@ image = Item.create!(name: "Image", price: '15', size: '30x30', user: max)
 image1 = Item.create!(name: "Image2", price: '16', size: '32x30', user: nico)
 image2 = Item.create!(name: "Image3", price: '18', size: '40x30', user: rayane)
 
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+item = Item.new(name: "Image", price: '15', size: '30x30', user: max)
+item.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
 Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: rayane, item: image)
-Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, item: image2)
+Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, item: image1)
 Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: max, item: image)
 Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: thomas, item: image2)
 
@@ -27,4 +33,4 @@ Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, it
 Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: max, item: image, status: 4)
 Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: thomas, item: image2, status: 4)
 
-puts 'We create a fake guys'
+puts 'We created fake accesses'

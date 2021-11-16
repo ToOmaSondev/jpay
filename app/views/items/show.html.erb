@@ -1,9 +1,10 @@
-<h1>Ici c'est la show</h1>
+
+<h1>Your picture was perfectly upload and ready to groove</h1>
 <%= link_to 'add a new', new_item_booking_path(@item) %>
 
-
 <div class="container-card">
-
+<%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
 <%= @item.name %>
 <%= @item.price %>
+<%= @item.photo %>
 </div>
