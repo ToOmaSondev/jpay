@@ -21,5 +21,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:begin_date, :end_date)
   end
-
 end
