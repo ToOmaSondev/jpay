@@ -15,13 +15,30 @@ nico = User.create!(name: "Nico", phone_number: '255484125', email: 'ceca@hotmai
 max = User.create!(name: "Max", phone_number: '27748445', email: 'ce@hotmail.com', password: 'har2re')
 thomas = User.create!(name: "Thomas", phone_number: '25555445', email: 'c@hotmail.com', password: 'haccrcore')
 
-image = Item.create!(name: "Image", price: '15', size: '30x30', user: max)
-image1 = Item.create!(name: "Image2", price: '16', size: '32x30', user: nico)
-image2 = Item.create!(name: "Image3", price: '18', size: '40x30', user: rayane)
-
 file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-item = Item.new(name: "Image", price: '15', size: '30x30', user: max)
-item.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+image4 = Item.new(name: "Image", price: '15', size: '30x30', user: max)
+image4.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+image4.save!
+
+file = URI.open('https://d1eh9yux7w8iql.cloudfront.net/product_images/1557727435.46.jpg')
+image = Item.new(name: "Image", price: '15', size: '30x30', user: max)
+image.photo.attach(io: file, filename: 'gameboy.jpg', content_type: 'image/png')
+image.save!
+
+file = URI.open('https://cdn-1.motorsport.com/images/amp/254B8MM0/s1000/red-bull-racing-2022-f1-car-1.jpg')
+image1 = Item.new(name: "Image2", price: '16', size: '32x30', user: nico)
+image1.photo.attach(io: file, filename: 'f1.jpg', content_type: 'image/png')
+image1.save!
+
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/0/0e/Chocolate02.png')
+image2 = Item.new(name: "Image3", price: '18', size: '40x30', user: rayane)
+image2.photo.attach(io: file, filename: 'chocolat.jpg', content_type: 'image/png')
+image2.save!
+
+file = URI.open('https://www.drivezeclerc.re/st-benoit/21701-large_default/nestle-chocapic-cereales-petit-dejeuner-430g.jpg')
+image3 = Item.new(name: "Image3", price: '18', size: '40x30', user: rayane)
+image3.photo.attach(io: file, filename: 'chocolat.jpg', content_type: 'image/png')
+image3.save!
 
 Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: rayane, item: image)
 Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, item: image1)
