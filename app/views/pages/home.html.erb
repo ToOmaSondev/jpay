@@ -3,11 +3,22 @@
 
 <br>
 
-<br>
-<div class="container-card">
-<% @items.each do |item| %>
-  <p><%= item.name %></p>
-<% end %>
+<div class="row my-2">
+  <% @items.each do |item| %>
+  <div class="col-12 col-sm-6 mb-4" data-aos="zoom-in">
+    <div class="bg-white rounded shadow h-100">
+
+      <div class="p-3 rounded-bottom d-flex flex-column">
+        <% if item.photo.attached? %>
+          <%=  cl_image_tag item.photo.key, alt: item.name, class: "container-card" %>
+        <% end %>
+        <div class="d-flex align-items-end justify-content-between pt-4">
+          <div>
+            <i class="fas fa-quote-left me-2"></i><small class="flex-grow-1"><%= item.name %></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
 </div>
-<br>
-<br>
