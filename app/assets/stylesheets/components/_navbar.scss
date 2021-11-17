@@ -1,4 +1,5 @@
 .navbar-lewagon {
+  position: relative;
   display: flex;
   justify-content: space-between;
   background-color: rgb(255, 255, 255);
@@ -11,8 +12,8 @@
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 5px;
-  box-shadow: rgba(150, 12, 12, 0.856);
-
+  // box-shadow: rgba(150, 12, 12, 0.856);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -25,7 +26,11 @@
   margin-right: auto;
   opacity: 0.85;
 }
-
+.place-img img {
+  width: 180px;
+  height: 90px;
+  object-fit: contain;
+}
 .place-img a:hover {
   opacity: 1;
 }
@@ -53,4 +58,10 @@
 
 .dropdown-item {
   color: black;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 21%;
 }
