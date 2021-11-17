@@ -15,6 +15,7 @@
         <div class="d-flex align-items-end justify-content-between pt-4">
           <div>
             <i class="fas fa-quote-left me-2"></i><small class="flex-grow-1"><%= item.name %></small>
+            <%= link_to 'See more', item_path(item), class: "btn btn-gradient" %>
           </div>
         </div>
       </div>
