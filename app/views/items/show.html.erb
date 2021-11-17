@@ -2,9 +2,18 @@
 <h1>Your picture was perfectly upload and ready to groove</h1>
 <%= link_to 'add a new', new_item_booking_path(@item) %>
 
-<div class="container-card">
-  <%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
-  <%= @item.name %>
-  <%= @item.price %>
+<div>
+  <div class="container-card">
+    <%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
+  </div>
+
+  <div class="container-card">
+    <h2><%= @item.name %></h2>
+    <br>
+    <h3><%= @item.price %>€</h3>
+  </div>
 </div>
-<%= link_to 'Rent Jpeg', new_item_booking_path(@item), class: "btn btn-gradient" %>
+
+<div class="center-button">
+<%= link_to 'Rent This Jpeg', new_item_booking_path(@item), class: "btn btn-gradient" %>
+</div>
