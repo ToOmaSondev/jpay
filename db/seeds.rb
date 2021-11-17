@@ -33,4 +33,4 @@ Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, it
 Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: max, item: image, status: 4)
 Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: thomas, item: image2, status: 4)
 
-puts 'We created fake accesses'
+puts 'Seed Created'
