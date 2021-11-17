@@ -1,7 +1,7 @@
 .navbar-lewagon {
   display: flex;
   justify-content: space-between;
-  background: url('row-of-cameras.jpeg');
+  background-color: rgb(255, 255, 255);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -11,37 +11,45 @@
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 5px;
-  box-shadow: 3px 3px 3px #02182B;
+
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 150px;
-  border-radius: 10px;
-  margin-left: 5px;
-  box-shadow: 4px 4px 4px #D1DEDE;
+.navbar-lewagon .place-img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(150, 12, 12, 0.856);
+  opacity: 0.85;
+}
+
+.place-img a:hover {
+  opacity: 1;
 }
 
 .btn-gradient {
-  color: #D1DEDE;
-  padding: 8px 24px;
+  color: black;
   border-radius: 4px;
-  background: linear-gradient(#FFCA3A, #02182B);
-  margin-left: 10px;
-  margin-right: 10px;
-  opacity: 0.95;
+  background: white;
+  opacity: 1;
   border: none;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#02182B, #FFCA3A);
-  color: #D1DEDE;
+  background: rgb(126, 126, 126);
+  color: white;
 }
 
 .dropdown-menu[data-bs-popper] {
   left: auto;
+  background-color: white;
+  color: black;
   right: 0;
+}
+
+.dropdown-item {
+  color: black;
 }
