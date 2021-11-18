@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
+puts "🗑  Deleting all assets"
+ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
 
 User.destroy_all
 puts 'Seed Destroy'
