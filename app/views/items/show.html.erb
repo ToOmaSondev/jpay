@@ -14,5 +14,10 @@
 </div>
 
 <div class="center-button">
-<%= link_to 'Dashboard', dashboard_path(@dashboard), class: "btn btn-gradient" %>
+
+  <% if @item.user == current_user %>
+    <%= link_to 'Dashboard', dashboard_path, class: "btn btn-gradient" %>
+  <% else %>
+    <%= link_to 'Rent this Jpay', new_item_booking_path(@item), class: "btn btn-gradient" %>
+  <% end %>
 </div>
