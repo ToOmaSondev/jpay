@@ -11,7 +11,9 @@
     <div class="half-home">
       <div class="cards-container">
         <% @items.each do |item| %>
-          <%= render 'shared/card', item: item %>
+          <%= link_to item_path(item) do %>
+            <%= render 'shared/card', item: item %>
+          <% end %>
         <% end %>
       </div>
     </div>
