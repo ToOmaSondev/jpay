@@ -1,10 +1,10 @@
-<h1>Oh Wow, an amazing index</h1>
-  <div class="cadre-2">
-<% @items.each do |item| %>
-<div class="container-card">
-<% if item.photo.attached? %>
-          <%= cl_image_tag item.photo.key, alt: item.name%>
-          <% end %>
-</div>
-<% end %>
+<div class="container">
+  <h1>WELCOME</h1>
+
+
+  <div class="cards-container">
+    <% @items.each do |item| %>
+      <%= render 'shared/card', item: item %>
+    <% end %>
+  </div>
 </div>

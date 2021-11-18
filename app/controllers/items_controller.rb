@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all
+    @random_4_items = @items.sample(4)
   end
 
   def show

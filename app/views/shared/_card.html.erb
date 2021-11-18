@@ -1,0 +1,9 @@
+<%# <div class="cards"> %>
+  <%# items.each do |item| %>
+    <div class="card-category">
+      <% if item.photo.attached? %>
+        <%= cl_image_tag item.photo.key, alt: item.name %>
+      <% end %>
+    </div>
+  <%# end %>
+<%# </div> %>
