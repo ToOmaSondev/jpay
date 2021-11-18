@@ -25,10 +25,10 @@ image2 = Item.new(name: "Bored Ape #2", price: '45', size: '631x631', user: raya
 image2.photo.attach(io: file, filename: 'BAYC#2.jpg', content_type: 'image/png')
 image2.save!
 
-file = URI.open('https://news.artnet.com/app/news-upload/2021/08/Yuga-Labs-Bored-Ape-Yacht-Club-7940.jpg')
-image3 = Item.new(name: "Bored Ape #3", price: '28', size: '631x631', user: nico)
-image3.photo.attach(io: file, filename: 'BAYC#3.jpg', content_type: 'image/png')
-image3.save!
+# file = URI.open('https://news.artnet.com/app/news-upload/2021/08/Yuga-Labs-Bored-Ape-Yacht-Club-7940.jpg')
+# image3 = Item.new(name: "Bored Ape #3", price: '28', size: '631x631', user: nico)
+# image3.photo.attach(io: file, filename: 'BAYC#3.jpg', content_type: 'image/png')
+# image3.save!
 
 file = URI.open('https://cdn.coinranking.com/nft/0x60F80121C31A0d46B5279700f9DF786054aa5eE5/1149072.png?size=autox860')
 image4 = Item.new(name: "Bored Ape #4", price: '33', size: '631x631', user: thomas)
@@ -215,15 +215,14 @@ image40 = Item.new(name: "CrypToadz #10", price: '20', size: '1400x1400', user: 
 image40.photo.attach(io: file, filename: 'CToadz#10.jpg', content_type: 'image/png')
 image40.save!
 
+# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: rayane, item: image)
+# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, item: image1)
+# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: max, item: image)
+# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: thomas, item: image2)
 
-Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: rayane, item: image)
-Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, item: image1)
-Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: max, item: image)
-Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: thomas, item: image2)
-
-Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: rayane, item: image, status: 3)
-Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, item: image2, status: 3)
-Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: max, item: image, status: 4)
-Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: thomas, item: image2, status: 4)
+# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: rayane, item: image, status: 3)
+# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, item: image2, status: 3)
+# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: max, item: image, status: 4)
+# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: thomas, item: image2, status: 4)
 
 puts 'Seed Created'
