@@ -2,10 +2,12 @@
 .search-form-control {
   position: relative;
   border-radius: 55px;
-  margin-top: 75px;
-  margin-left: 75px;
-  margin-bottom: 25px;
-  margin-right: 75px;
+  margin-right: 195px;
+  margin-left: 30px;
+}
+
+.search {
+  width: 70%;
 }
 
 .search-form-control .btn {
@@ -13,6 +15,14 @@
   top: 8px;
   bottom: 8px;
   right: 8px;
+  background: linear-gradient(90deg, rgba(8,2,37,1) 5%, rgba(3,3,54,1) 35%, rgba(12,19,78,1) 68%, rgba(56,63,105,1) 98%);
+  border-radius: 55px;
+  color:white
+
+}
+.search-form-control .btn:hover {
+  background: linear-gradient(90deg, rgb(37, 12, 163) 5%, rgb(7, 7, 170) 35%, rgb(37, 51, 182) 68%, rgb(104, 117, 196) 98%);;
+  color: white;
 }
 
 .search-form-control .form-control {
@@ -23,7 +33,7 @@
 }
 
 .search-form-control .form-control:focus {
-  border: 1px solid #1EDD88;
+  border: 1px solid #02182B;
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }

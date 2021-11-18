@@ -3,6 +3,12 @@ class PagesController < ApplicationController
 
   def home
     @items = Item.all.limit(4)
+    if params[:search]
+      @items = Item.all.where("name ILIKE ?", "%#{params[:search][:query]}%")
+    else
+      @items = Item.all
+    end
+
   end
 
   def dashboard
