@@ -4,14 +4,6 @@
   </div>
   <div class="search">
 
-  <%= form_tag root_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find an item"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
 
   <%= simple_form_for :search, url: root_path, method: :get do |f| %>
     <div class="search-form-control form-group">
@@ -21,6 +13,7 @@
       </button>
     </div>
   <% end %>
+  
 </div>
   <div class="nav-item dropdown">
     <ul class="navbar-nav mr-auto">
