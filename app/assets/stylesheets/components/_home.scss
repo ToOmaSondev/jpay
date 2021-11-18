@@ -1,0 +1,46 @@
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  height: 60vh;
+}
+
+.half-home {
+  width: 45%;
+  height: 100%;
+  margin: 5vh auto;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.home-btn {
+  padding: 10px 20px;
+  background-color: blue;
+  transition: 0.7s all ease;
+  text-decoration: none;
+  color: white;
+  &:hover {
+    color: blue;
+    background-color: white;
+  }
+}
+// .cards {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-gap: 16px;
+// }
+
+// .home-card {
+//   display: flex;
+
+// }
+
+// .left-card {
+//   display: flex ;
+
+// }
+
+// .right-card {
+//   display: flex;
+//   flex-wrap: wrap;
+
+// }

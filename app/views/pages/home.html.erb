@@ -1,22 +1,20 @@
-<div class="row my-2">
-  <% @items.each do |item| %>
-    <div class="col-12 col-sm-6 mb-4" data-aos="zoom-in">
-      <div class="bg-white rounded shadow h-100">
+  <div class="home-container">
+    <div class="half-home">
+      <h1 class="text-center">Jipay</h1>
+      <p class="text-center mb-5">Lorem ipsum et dolor sit amet</p>
+      <div class="d-flex justify-content-around">
+        <%= link_to "Explore", items_path, class: "home-btn" %>
+        <%= link_to "Upload", new_item_path, class: "home-btn" %>
 
-        <div class="p-3 rounded-bottom d-flex flex-column">
-          <% if item.photo.attached? %>
-            <%=  cl_image_tag item.photo.key, alt: item.name, class: "container-card" %>
-          <% end %>
-          <div class="d-flex align-items-end justify-content-between pt-4">
-            <div>
-              <i class="fas fa-quote-left me-2"></i><small class="flex-grow-1"><%= item.name %></small>
-              <%= link_to 'See more', item_path(item), class: "btn btn-gradient" %>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-  <% end %>
-</div>
+    <div class="half-home">
+      <div class="cards-container">
+        <% @items.each do |item| %>
+          <%= render 'shared/card', item: item %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
 </div>

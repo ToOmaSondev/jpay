@@ -12,16 +12,29 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 200px;
+  margin: 15px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
 }
 
-.container-card {
+.cards-container {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 16px;
-  background-position: center;
-
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
+// .container-card {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+//   margin-top: 16px;
+//   background-position: center;
+
+// }
 
 a {
   color: whitesmoke;
