@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 puts "🗑  Deleting all assets"
 ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
@@ -27,10 +20,10 @@ image2 = Item.new(name: "Bored Ape #2", price: '45', size: '631x631', user: raya
 image2.photo.attach(io: file, filename: 'BAYC#2.jpg', content_type: 'image/png')
 image2.save!
 
-# file = URI.open('https://news.artnet.com/app/news-upload/2021/08/Yuga-Labs-Bored-Ape-Yacht-Club-7940.jpg')
-# image3 = Item.new(name: "Bored Ape #3", price: '28', size: '631x631', user: nico)
-# image3.photo.attach(io: file, filename: 'BAYC#3.jpg', content_type: 'image/png')
-# image3.save!
+file = URI.open('https://cdn.coinranking.com/nft/0x60F80121C31A0d46B5279700f9DF786054aa5eE5/1160346.png?size=autox860')
+image3 = Item.new(name: "Bored Ape #3", price: '28', size: '631x631', user: nico)
+image3.photo.attach(io: file, filename: 'BAYC#3.jpg', content_type: 'image/png')
+image3.save!
 
 file = URI.open('https://cdn.coinranking.com/nft/0x60F80121C31A0d46B5279700f9DF786054aa5eE5/1149072.png?size=autox860')
 image4 = Item.new(name: "Bored Ape #4", price: '33', size: '631x631', user: thomas)

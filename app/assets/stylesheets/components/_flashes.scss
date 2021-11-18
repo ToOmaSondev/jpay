@@ -5,22 +5,23 @@
   align-items: center;
   background: white;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  border-radius: 4px;
+  border-radius: 35px;
   margin: 8px;
   position: absolute;
   top: 120px;
   left: 5vw;
   height: 20px;
-}
 
-.flash-success {
-  border: 2px solid #1EDD88;
-}
 
-.flash-warning {
-  border: 2px solid #FFC65A;
-}
+  .flash-success {
+    border: 2px solid #1EDD88;
+  }
 
-.flash-danger {
-  border: 2px solid #FD1015;
+  .flash-warning {
+    border: 2px solid #FFC65A;
+  }
+
+  .flash-danger {
+    border: 2px solid #FD1015;
+  }
 }

@@ -6,13 +6,13 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @my_bookings_to_review = Booking.joins(:item).where(bookings: { status: "pending" }, items: { user_id: current_user })
     @my_items = Item.where(user: current_user)
-    @bookings = Booking.where(user: current_user)
+    @my_confirmed_bookings = Booking.where(user: current_user, status: "accepted")
+    @pending_bookings = Booking.where(user: current_user, status: "pending")
 
-    @active_incoming_bookings = Booking.joins(:item).where(bookings: { status: 1..2 },
-                                                           items: { user_id: current_user })
-    @inactive_incoming_bookings = Booking.joins(:item).where(bookings: { status: 3..4 },
-                                                             items: { user_id: current_user })
+    @active_incoming_bookings = Booking.joins(:item).where(bookings: { status: "accepted" }, items: { user_id: current_user })
+    @inactive_incoming_bookings = Booking.joins(:item).where(bookings: { status: ["cancelled", "declined"] }, items: { user_id: current_user })
   end
 
   private

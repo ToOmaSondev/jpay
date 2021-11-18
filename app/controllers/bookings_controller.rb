@@ -17,6 +17,16 @@ class BookingsController < ApplicationController
     end
   end
 
+  def status
+    @booking = Booking.find(params[:id])
+    if params[:accepted] == "true"
+      @booking.accepted!
+    else
+      @booking.declined!
+    end
+    redirect_to dashboard_path
+  end
+
   private
 
   def booking_params
