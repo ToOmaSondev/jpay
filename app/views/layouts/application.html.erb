@@ -27,26 +27,7 @@
       <%= yield %>
     </div>
 
-
-  <div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div id="scroll_to_top">
-      <%= link_to "#top" do %>
-        <%= image_tag("logo_transparentwhite.png") %>
-      <% end %>
-    </div>
-
-    <div class="btn-footer">
-      <a href="https://www.airbnb.fr/" target="blank" style="font-size: 14px;">Confidentialité</a>
-      <a href="https://www.airbnb.fr/" target="blank" style="font-size: 14px;">Mentions</a>
-    </div>
-  </div>
+    <%= render 'shared/footer' %>
 
 
 
