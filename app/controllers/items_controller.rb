@@ -15,6 +15,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.user = current_user
     if @item.save
+      flash[:success] = 'Item was Uploaded'
       redirect_to dashboard_path(@dashboard)
     else
       render :new

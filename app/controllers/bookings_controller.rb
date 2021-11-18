@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.item = @item
     if @booking.save
+      flash[:success] = 'Item was add to your Dashboard'
       redirect_to dashboard_path(@dashboard)
     else
       render :new

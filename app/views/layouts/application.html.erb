@@ -14,11 +14,21 @@
 
     <%= render 'shared/navbar' %>
 
+    <% flash.each do |type, msg|%>
+    <div class="flash flash-<%=type %> alert alert-dismissible fade show" role="alert">
+      <span><%= msg %></span>
+      <a data-dismiss="alert" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </a>
+    </div>
+    <% end %>
+
     <div style="min-height: 80vh">
       <%= yield %>
     </div>
 
     <%= render 'shared/footer' %>
+
 
 
   </body>
