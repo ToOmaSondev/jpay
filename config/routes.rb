@@ -6,4 +6,9 @@ Rails.application.routes.draw do
   resources :items, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:new, :create, :show]
   end
+  resources :bookings, only: [] do
+    member do
+      patch :status
+    end
+  end
 end
