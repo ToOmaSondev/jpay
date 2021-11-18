@@ -9,10 +9,9 @@ class PagesController < ApplicationController
     @my_items = Item.where(user: current_user)
     @bookings = Booking.where(user: current_user)
 
-    @active_incoming_bookings = Booking.joins(:item).where(bookings: { status: 1..2 },
-                                                           items: { user_id: current_user })
-    @inactive_incoming_bookings = Booking.joins(:item).where(bookings: { status: 3..4 },
-                                                             items: { user_id: current_user })
+    @pending_bookings = Booking.joins(:item).where(bookings: { status: "pending" }, items: { user_id: current_user })
+    @active_incoming_bookings = Booking.joins(:item).where(bookings: { status: "accepted" }, items: { user_id: current_user })
+    @inactive_incoming_bookings = Booking.joins(:item).where(bookings: { status: ["cancelled", "declined"] }, items: { user_id: current_user })
   end
 
   private
