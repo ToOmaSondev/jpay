@@ -1,15 +1,28 @@
 .form-devise {
   display: flex;
+  color: white;
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  background-color: rgb(184, 184, 146);
+  background: linear-gradient(90deg, rgb(28, 21, 65) 5%, rgb(24, 24, 82) 35%, rgb(33, 39, 87) 68%, rgb(43, 51, 97) 98%);
   background-size: cover;
   border-radius: 12px;
   padding: 80px;
   margin: 80px;
+}
 
+.form-actions {
+  color: white;
+}
 
+.login {
+  background-color: white;
+}
 
+.signup {
+  background-color: white;
+}
 
+.forgot {
+  background-color: white;
 }
