@@ -23,6 +23,12 @@
     background-color: white;
   }
 }
+
+.card-item-center {
+  flex-direction: row;
+  justify-content: center;
+
+}
 // .cards {
 //   display: grid;
 //   grid-template-columns: 1fr 1fr;
