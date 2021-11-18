@@ -1,12 +1,11 @@
 <div class="container">
-  <h1>WELCOME</h1>
 
 
-  <div class="cards-container">
+  <div class="cards-index">
     <% @items.each do |item| %>
       <%= link_to item_path(item) do %>
         <%= render 'shared/card', item: item %>
       <% end %>
     <% end %>
-  </div>
+    </div>
 </div>

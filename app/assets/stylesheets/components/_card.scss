@@ -39,3 +39,13 @@
 a {
   color: whitesmoke;
 }
+
+.cards-index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    background-color: white;
+    background-size: cover;
+    margin: 35px;
+    border-radius: 30px;}
