@@ -1,7 +1,10 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all
-    @random_4_items = @items.sample(4)
+    if params[:search]
+      @items = Item.all.where("name ILIKE ?", "%#{params[:search][:query]}%")
+    else
+      @items = Item.all
+    end
   end
 
   def show
