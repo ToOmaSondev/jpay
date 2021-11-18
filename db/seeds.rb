@@ -8,6 +8,7 @@
 require "open-uri"
 puts "🗑  Deleting all assets"
 ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
+
 User.destroy_all
 puts 'Seed Destroy'
 
