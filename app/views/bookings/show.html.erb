@@ -1,5 +1,4 @@
-
-<h1><%= @item.name %></h1>
+<h1>Your picture was perfectly upload and ready to groove</h1>
 
 
 <div>
@@ -8,11 +7,12 @@
   </div>
 
   <div class="card">
+    <h2><%= @item.name %></h2>
     <br>
     <h3><%= @item.price %>€</h3>
   </div>
 </div>
 
 <div class="center-button">
-<%= link_to 'Dashboard', dashboard_path(@dashboard), class: "btn btn-gradient" %>
+<%= link_to 'Rent This Jpeg', new_item_booking_path(@item), class: "btn btn-gradient" %>
 </div>
