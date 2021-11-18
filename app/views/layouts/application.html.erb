@@ -15,9 +15,9 @@
     <%= render 'shared/navbar' %>
 
     <% flash.each do |type, msg|%>
-    <div class="flash flash-<%=type %> alert alert-dismissible fade show" role="alert">
+    <div data-controller="flash" data-flash-target="popup" class="flash flash-<%=type %> alert alert-dismissible fade show" role="alert">
       <span><%= msg %></span>
-      <a data-dismiss="alert" aria-label="Close">
+      <a data-action="click->flash#hidePopup" aria-label="Close">
         <i class="fas fa-times"></i>
       </a>
     </div>
