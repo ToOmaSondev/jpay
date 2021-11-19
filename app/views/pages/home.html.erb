@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="half-home">
-      <div class="cards-container">
+      <div class="cards-container mb-5">
         <% @items.each do |item| %>
           <%= link_to item_path(item) do %>
             <%= render 'shared/card', item: item %>
