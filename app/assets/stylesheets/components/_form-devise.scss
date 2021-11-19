@@ -1,14 +1,16 @@
 .form-devise {
   display: flex;
-  color: white;
+  color: black;
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  background: linear-gradient(90deg, rgb(28, 21, 65) 5%, rgb(24, 24, 82) 35%, rgb(33, 39, 87) 68%, rgb(43, 51, 97) 98%);
+
   background-size: cover;
   border-radius: 12px;
-  padding: 80px;
-  margin: 80px;
+  padding: 30px;
+  margin: 80px auto;
+  background-color: white;
+  width: 400px;
 }
 
 .form-actions {
@@ -17,18 +19,22 @@
 
 .login {
   background-color: white;
+  color: black;
 }
 
 .signup {
   background-color: white;
   width: 100px;
   text-decoration: none;
+  color: black;
 }
 
 .forgot {
   background-color: white;
   width: 200px;
   text-decoration: none;
+  border-radius: 5px;
+  color: black;
 
 }
 .signup:hover {
