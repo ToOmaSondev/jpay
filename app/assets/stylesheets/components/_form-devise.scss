@@ -21,8 +21,30 @@
 
 .signup {
   background-color: white;
+  width: 100px;
+  text-decoration: none;
 }
 
 .forgot {
   background-color: white;
+  width: 200px;
+  text-decoration: none;
+
+}
+.signup:hover {
+    color: gray;
+  }
+
+.forgot:hover {
+    color: gray;
+  }
+
+
+.btn-signup {
+  color: rgb(255, 255, 255);
+  border-radius: 60px;
+  background: linear-gradient(90deg, rgba(8,2,37,1) 5%, rgba(3,3,54,1) 35%, rgba(12,19,78,1) 68%, rgba(56,63,105,1) 98%);
+  opacity: 1;
+  border: none;
+  margin-right: 30px;
 }
