@@ -1,9 +1,7 @@
 <div class="container">
-
-
   <div class="cards-index">
     <% @items.each do |item| %>
-      <%= link_to item_path(item) do %>
+      <%= link_to item_path(item), class: 'scroll-reveal' do %>
         <%= render 'shared/card', item: item %>
       <% end %>
     <% end %>
