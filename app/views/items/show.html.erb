@@ -1,7 +1,7 @@
 
 <div class='color-title'><%= @item.name %></div>
 
-
+<div class='form-devise'>
 <div>
   <div class="card card-item-center">
     <%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
@@ -20,4 +20,5 @@
   <% else %>
     <%= link_to 'Rent this Jpay', new_item_booking_path(@item), class: "btn btn-gradient" %>
   <% end %>
+</div>
 </div>
