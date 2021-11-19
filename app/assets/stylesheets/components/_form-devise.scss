@@ -1,6 +1,6 @@
 .form-devise {
   display: flex;
-  color: black;
+  color:black;
   justify-content: center;
   align-content: center;
   flex-direction: column;
@@ -14,7 +14,26 @@
 }
 
 .form-actions {
+  border-radius: 55px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, rgba(8,2,37,1) 5%, rgba(3,3,54,1) 35%, rgba(12,19,78,1) 68%, rgba(56,63,105,1) 98%);
+  transition: 0.7s all ease;
+  text-decoration: none;
   color: white;
+  &:hover {
+    color: white;
+  background: linear-gradient(90deg, rgb(37, 12, 163) 5%, rgb(7, 7, 170) 35%, rgb(37, 51, 182) 68%, rgb(104, 117, 196) 98%);;
+  }
+}
+
+.btn {
+  color: white;
+  margin-left: 110px;
+  &:hover {
+    color: white;
+  }
 }
 
 .login {
