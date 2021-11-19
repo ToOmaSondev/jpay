@@ -1,5 +1,9 @@
 require "open-uri"
-puts "🗑  Deleting all assets"
+puts "🗑  Erasing Hard Drive..."
+puts "Reformatting Disk...//&@"
+puts "Installing Regex_keyLoGgEr_tags:Horse_trojan"
+puts "Activating packages and rewriting ScrIptS"
+puts "Installing Ransomware:::Axie_Mixer_hAcK <3 UraNiUM'S_LoVe"
 ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
 
 User.destroy_all

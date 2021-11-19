@@ -6,8 +6,7 @@ const initTyped = () => {
     new Typed('.typed-js', {
       strings: ['Welcome To Jpay. Explore, Upload and Rent Jpegs.'],
       typeSpeed: 100,
-      loop: true,
-      loopCount: 1,
+      loop: false,
       showCursor: false
     });
   }
