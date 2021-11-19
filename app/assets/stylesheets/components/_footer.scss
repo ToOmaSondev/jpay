@@ -1,5 +1,5 @@
 .footer {
-  background: #000000;
+  background:white;
   display: flex;
   border-radius: 10px;
   align-items: center;
@@ -16,6 +16,10 @@
 .footer-links {
   display: flex;
   align-items: center;
+}
+
+.colored-icons {
+  color: black
 }
 .footer-links a {
   color: rgb(255, 255, 255);
@@ -34,9 +38,11 @@
   justify-content: space-between;
   display: flex;
   align-items: center;
+  color: black ;
+  background-color: white;
 }
 .btn-footer a {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   opacity: 0.55;
   text-decoration: none;
   font-size: 24px;
