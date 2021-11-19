@@ -22,7 +22,7 @@
 
   <div class="tab-content mb-5" id="myTabContent">
     <div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
-      <div class="color-title">MY BOOKING TO REVIEW</div>
+      <div class="color-title">MY BOOKINGS TO REVIEW</div>
       <div class="cards-container">
        <div class="cards-index">
         <% @my_bookings_to_review.each do |booking| %>
@@ -37,7 +37,7 @@
  </div>
 
   <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-    <div class="color-title">MY JPEG</div>
+    <div class="color-title">MY JPEGS</div>
     <div class="cards-container">
       <div class="cards-index">
         <% @my_items.each do |item| %>
@@ -77,7 +77,7 @@
  </div>
 
   <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-    <div class="color-title">MY ACTIVE JPEG BOOKINGS</div>
+    <div class="color-title">MY CURRENT JPEG BOOKINGS</div>
     <div class="cards-container">
       <div class="cards-index">
         <% @active_incoming_bookings.each do |booking| %>
@@ -90,7 +90,7 @@
  </div>
 
   <div class="tab-pane fade" id="inactive" role="tabpanel" aria-labelledby="contact-tab">
-    <div class="color-title">MY INACTIVE JPEG BOOKINGS</div>
+    <div class="color-title">DECLINED & CANCELLED BOOKINGS</div>
     <div class="cards-container">
       <div class="cards-index">
         <% @inactive_incoming_bookings.each do |booking| %>
